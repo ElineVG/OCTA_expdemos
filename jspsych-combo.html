@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jspsych.js"></script>
+    <script src="plugins/jspsych-html-button-response-circle.js"></script>
+    <script src="plugins/jspsych-html-button-response.js"></script>
+    <script src="plugins/jspsych-image-resize-response.js"></script>
+    <script src="plugins/jspsych-survey-likert.js"></script>      
+    <script src="plugins/jspsych-free-sort.js"></script>
+    <script src="plugins/jspsych-maxdiff.js"></script>
+    <script src="plugins/jspsych-custom-survey-html-form_imageratings_ENG.js"></script>
+    <link rel="stylesheet" href="css/jspsych.css">
+  </head>
+  <body></body>
+  <script>
+      
+var order_complexity_pleasure_interest = [
+    {prompt: "ordered", name: "order", required: true},
+    {prompt: "complex", name: "complexity", required: true},
+    {prompt: "interesting", name: 'interest', required: true},
+    {prompt: "pleasing", name: 'pleasantness', required: true},
+  ]
+
+var question_set = jsPsych.randomization.sampleWithoutReplacement(order_complexity_pleasure_interest, 4);
+      
+  
+var likert_trial = {
+    type: 'custom-survey-html-form',
+
+    stimulus: "<img style = 'width: 380px; ' src = 'img/ord4.svg'>",
+    randomize_question_order: false,
+    questions: question_set
+    }
+ 
+      
+var buttons1 = {
+    type: 'html-button-response-circle',
+    choices: ["img/ord1.svg","img/ord2.svg","img/ord3.svg","img/ord4.svg",
+                "img/ord5.svg","img/ord6.svg", "img/compl1.svg", "img/compl2.svg"],
+    prompt_html: "Please click the image you prefer",
+    fixation_html: "<img src='img/fixation.gif'>",
+    circle_diameter: 500,
+    circle_offset: 22 
+  };
+      
+
+      
+var pref = {
+    type: 'html-button-response',
+    choices: ["<img src = 'img/ord4.svg'>","<img src = 'img/ord2.svg'>","<img src = 'img/ord1.svg'>","<img src = 'img/ord3.svg'>"],
+    stimulus: "Please click the image you prefer</br></br>"
+};
+      
+      
+
+  var buttons2 = {
+    type: 'html-button-response-circle',
+      choices: ["img/ord1.svg","img/ord2.svg","img/ord3.svg","img/ord4.svg",
+                "img/ord5.svg","img/ord6.svg", "img/compl1.svg", "img/compl2.svg"],      
+    button_html: '<button class="jspsych-btn custombutton"><img src=%choice% width="100"></button>',
+    button_size : [100,100],
+    fixation_html: "Please click the image you prefer",
+    fixation_size: [250,100],
+    circle_diameter: 500,
+    circle_offset: 22
+  };
+      
+      
+ var scale_1 = [
+  "1", 
+  "2", 
+  "3", 
+  "4", 
+  "5",
+      "6",
+      "7"
+  ];
+
+var likert = {
+  type: 'survey-likert',
+  questions: [
+    {prompt: 'How much do you like this image?</br><img style = "width: 250px;" src = "img/ord1.svg">', labels: scale_1}
+  ]
+};
+
+var stimresize = {
+  type: 'image-resize-response',
+  stimulus: 'img/ord1.svg',
+  stim_width: 250,
+  stim_height: 300,
+  prompt: "<p>Resize the stimulus as preferred.</p>",
+  fixed_aspectratio: false
+};
+      
+      
+ var freesort1 = {
+    type: 'free-sort',
+    stim_width: '100',
+    stim_height: '100',
+      stim_starts_inside: false,
+    scale_factor: 1,
+    counter_text_unfinished: 'Place all elements within the frame in the way you like best.',
+    counter_text_finished: '',
+    sort_area_height: '300',
+    sort_area_width: '300',
+    sort_area_shape: 'square',
+    change_border_background_color: false,
+    border_width: 3,
+    stimuli: ["img/purple_circle.svg", "img/blue_rectangle.svg",
+              "img/green_triangle.svg","img/green_circle.svg"]
+  };
+      
+ var freesort2 = {
+    type: 'free-sort',
+    stim_width: '100',
+    stim_height: '100',
+      stim_starts_inside: false,
+    scale_factor: 1,
+    counter_text_unfinished: 'Place all elements within the frame in the way you like best.',
+    counter_text_finished: '',
+    sort_area_height: '300',
+    sort_area_width: '300',
+    sort_area_shape: 'square',
+    change_border_background_color: false,
+    border_width: 3,
+    stimuli: ["img/dynamic_triangle.svg","img/dynamic_circle.svg",
+              "img/discrete_triangle.svg", "img/discrete_circle.svg" ]
+     //"img/bluerectangle.svg","img/bluecircle.svg","img/bluetriangle.svg", "img/greenrectangle.svg",       "img/greentriangle.svg","img/greencircle.svg",
+  };
+
+var maxdiff = {
+  type: 'maxdiff',
+  alternatives: ['<img style = "width: 60px;" src = "img/ord1.svg">',
+                 '<img style = "width: 60px;" src = "img/ord2.svg">',
+                 '<img style = "width: 60px;" src = "img/ord3.svg">',
+                 '<img style = "width: 60px;" src = "img/ord4.svg">'],
+  labels: ['Most preferred', 'Least preferred'],
+  preamble: '<p> Please select your <b>most preferred</b> and <b>least preferred</b> images. </p>'
+};
+
+var end = {
+    type: 'html-button-response',
+    choices: ["<h3>and many more options!</h3>"],
+    stimulus: ""
+};
+    
+
+  jsPsych.init({
+    timeline: [ pref,  buttons1,  maxdiff, likert, likert_trial, freesort1, stimresize, freesort2, end],
+    on_finish: function(){jsPsych.data.displayData();}
+  });
+
+
+  </script>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="full" height="134" version="1.1" width="134" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs/>
+  <g transform=" rotate(0, 67, 67)">
+    <rect fill="none" height="134" width="134" x="0" y="0"/>
+    <ellipse cx="27" cy="27" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 27, 27)"/>
+    <polygon fill="#006ca1" opacity="1" points="39.5,34.5 47,19.5 54.5,34.5" stroke-width="0" transform=" rotate(0, 47, 27)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 67, 27)" width="15" x="59.5" y="19.5"/>
+    <ellipse cx="87" cy="27" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 87, 27)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 107, 27)" width="15" x="99.5" y="19.5"/>
+    <ellipse cx="27" cy="47" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 27, 47)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 47, 47)" width="15" x="39.5" y="39.5"/>
+    <ellipse cx="67" cy="47" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 67, 47)"/>
+    <ellipse cx="87" cy="47" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 87, 47)"/>
+    <polygon fill="#006ca1" opacity="1" points="99.5,54.5 107,39.5 114.5,54.5" stroke-width="0" transform=" rotate(0, 107, 47)"/>
+    <ellipse cx="27" cy="67" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 27, 67)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 47, 67)" width="15" x="39.5" y="59.5"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 67, 67)" width="15" x="59.5" y="59.5"/>
+    <ellipse cx="87" cy="67" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 87, 67)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 107, 67)" width="15" x="99.5" y="59.5"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 27, 87)" width="15" x="19.5" y="79.5"/>
+    <polygon fill="#006ca1" opacity="1" points="39.5,94.5 47,79.5 54.5,94.5" stroke-width="0" transform=" rotate(0, 47, 87)"/>
+    <ellipse cx="67" cy="87" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 67, 87)"/>
+    <polygon fill="#006ca1" opacity="1" points="79.5,94.5 87,79.5 94.5,94.5" stroke-width="0" transform=" rotate(0, 87, 87)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 107, 87)" width="15" x="99.5" y="79.5"/>
+    <polygon fill="#006ca1" opacity="1" points="19.5,114.5 27,99.5 34.5,114.5" stroke-width="0" transform=" rotate(0, 27, 107)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 47, 107)" width="15" x="39.5" y="99.5"/>
+    <ellipse cx="67" cy="107" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 67, 107)"/>
+    <ellipse cx="87" cy="107" fill="#6dd6ff" opacity="1" rx="7.5" ry="7.5" stroke-width="0" transform=" rotate(0, 87, 107)"/>
+    <rect fill="#1b9fd8" height="15" opacity="1" stroke-width="0" transform=" rotate(0, 107, 107)" width="15" x="99.5" y="99.5"/>
+  </g>
+</svg>
